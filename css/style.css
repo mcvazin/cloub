@@ -130,6 +130,7 @@ a.navbar-brand {
 .input-group.top-search {
   width: 380px;
   height: 32px;
+  max-width: 100%;
 }
 
 .input-group.top-search {
@@ -236,6 +237,7 @@ aside {
   float: left;
   padding: 30px 40px;
   text-align: center;
+  position: relative;
 }
 
 main {
@@ -244,6 +246,7 @@ main {
   width: calc(100% - 462px);
   padding-right: 52px;
   overflow-x: auto;
+  transition: 0.5s width;
 }
 
 .tab-pane {
@@ -728,6 +731,7 @@ h1.main-title {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  cursor: pointer;
 }
 
 .user-manager {
@@ -736,6 +740,22 @@ h1.main-title {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 25px;
+  position: relative;
+}
+
+p.manager-contacts {
+  position: absolute;
+  top: -280px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  justify-content: space-between;
+  display: none;
+}
+
+p.manager-contacts.show-contact {
+  display: flex;
 }
 
 p.name-manager {
@@ -968,30 +988,164 @@ p.work-hour {
   display: none;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
+.pc-close-aside {
+  width: 20px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+aside.aside-pc-close {
+  left: -400px;
+  margin-right: 0;
+  position: absolute;
+  transition: 0.5s all;
+}
+
+main.main-pc-full-width {
+  width: 100%;
+  padding: 0 15px;
+  transition: 0.5s all;
+}
+
+aside.aside-pc-close .pc-close-aside {
+  right: -35px;
+  top: 0;
+  transform: rotate(180deg);
+  background: #fff;
+  padding: 5px;
+  width: 35px;
+}
+
+h1.main-title,
+.nav-tabs,
+.tab-content {
+  min-width: 1100px;
+}
+
+/*scroll*/
+/* полоса прокрутки (скроллбар) */
+main::-webkit-scrollbar {
+  width: 24px; /* ширина для вертикального скролла */
+  height: 10px; /* высота для горизонтального скролла */
+  background-color: #ffffff;
+}
+
+/* ползунок скроллбара */
+main::-webkit-scrollbar-thumb {
+  background-color: #1770d5;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+/* Стрелки */
+
+main::-webkit-scrollbar-button:vertical:start:decrement {
+  background: linear-gradient(120deg, #ffffff 40%, rgba(0, 0, 0, 0) 41%),
+  linear-gradient(240deg, #1770d5 40%, rgba(0, 0, 0, 0) 41%),
+  linear-gradient(0deg, #1770d5 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+main::-webkit-scrollbar-button:vertical:end:increment {
+  background:
+      linear-gradient(300deg, #1770d5 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(60deg, #1770d5 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(180deg, #1770d5 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+main::-webkit-scrollbar-button:horizontal:start:decrement {
+  background:
+      linear-gradient(30deg, #1770d5 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(150deg, #1770d5 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(270deg, #1770d5 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+main::-webkit-scrollbar-button:horizontal:end:increment {
+  background:
+      linear-gradient(210deg, #1770d5 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(330deg, #1770d5 40%, rgba(0, 0, 0, 0) 41%),
+      linear-gradient(90deg, #1770d5 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+/*scroll*/
+
 /*MEDIA*/
-@media only screen and (max-width: 1750px) {
-  li.menu__item:not(:last-child) {
-    margin-right: 20px;
+
+@media only screen and (max-width: 1800px) {
+  select.minimal {
+    width: 165px;
   }
 
-  .lang-top {
-    width: 180px;
-  }
-} /*1750*/
-
-@media only screen and (max-width: 1600px) {
-  li.menu__item:not(:last-child) {
+  .label-radio-forma:not(:last-child) {
     margin-right: 10px;
   }
 
-  .menu__item > a {
-    font-size: 16px;
+  .options2 .opt-radio-title {
+    font-size: 12px;
   }
 
+  .opt-select-title {
+    font-size: 12px;
+  }
+
+  .opt-radio.opt-switch-img .opt-radio-title {
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  .input-group.top-search {
+    width: 260px;
+  }
+
+  li.menu__item:not(:last-child) {
+    margin-right: 35px;
+  }
+  .lang-top {
+    width: 180px;
+  }
+} /*1800*/
+
+
+
+@media only screen and (max-width: 1600px) {
   .lang-top {
     width: 170px;
   }
+
+  select.minimal {
+    width: 155px;
+  }
+
+  .label-radio-forma:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .options2 .opt-radio-title {
+    font-size: 11px;
+  }
+
+  .opt-select-title {
+    font-size: 11px;
+  }
+
+  .opt-radio.opt-switch-img .opt-radio-title {
+    font-size: 14px;
+    margin-right: 5px;
+  }
 } /*1600*/
+
+@media only screen and (max-width: 1580px) {
+  li.menu__item:not(:last-child) {
+    margin-right: 25px;
+  }
+} /*1580*/
 
 @media only screen and (max-width: 1500px) {
   div#navbarNav {
@@ -1000,6 +1154,10 @@ p.work-hour {
   .input-group.top-search {
     flex-basis: 100%;
     margin-bottom: 1em;
+  }
+
+  li.menu__item:not(:last-child) {
+    margin-right: 35px;
   }
 } /*1500*/
 
@@ -1012,6 +1170,10 @@ p.work-hour {
 } /*1100*/
 
 @media only screen and (max-width: 991.8px) {
+  .pc-close-aside {
+    display: none;
+  }
+
   .menu {
     display: block;
   }
@@ -1186,15 +1348,17 @@ p.work-hour {
     align-items: center;
     width: 100%;
     background: #fff;
+    height: calc(100vh - 60px);
   }
 
   .input-group.top-search {
     margin: 0 auto;
     margin-top: 15px;
+    width: 285px;
   }
 
   ul.navbar-nav {
-    margin: 1em auto;
+    margin: 3em auto;
     width: max-content;
     text-align: center;
   }
@@ -1202,6 +1366,8 @@ p.work-hour {
   .lang-top {
     margin: 0 auto;
     margin-bottom: 15px;
+    width: 230px;
+    margin-top: 3em;
   }
 
   nav.navbar.navbar-expand-lg {
@@ -1209,8 +1375,13 @@ p.work-hour {
   }
 
   li.menu__item:not(:last-child) {
-    margin-bottom: 0.5em;
+    margin-bottom: 1.5em;
+    margin-right: 0;
   }
+
+  .menu__item > a {
+    font-size: 20px;
+}
 
   .options-menu {
     display: block;
@@ -1220,6 +1391,7 @@ p.work-hour {
     width: 100%;
     max-width: 100%;
     margin: 0;
+    min-width: auto;
   }
 
   .options-menu {
@@ -1250,20 +1422,16 @@ p.work-hour {
   }
 } /*991*/
 
-
-
 @media only screen and (max-width: 767.8px) {
   .col-sm-6 {
     height: 12em;
-}
+  }
 
-.worked-on {
+  .worked-on {
     text-align: center;
-}
+  }
 
-
-footer {
+  footer {
     padding: 25px 0 0;
-}
-
-}/*767*/
+  }
+} /*767*/
