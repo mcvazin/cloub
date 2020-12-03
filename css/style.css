@@ -259,6 +259,7 @@ main {
 select.minimal {
   background: #ffffff;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+  padding-right: 10px;
   border-radius: 4px;
   border: none;
   width: 202px;
@@ -267,6 +268,17 @@ select.minimal {
   text-align-last: center;
   font-weight: 600;
   font-size: 12px;
+  -webkit-appearance: none;
+  background-image: url(../img/ico/arrow-down.svg);
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -ms-appearance: none;
+  appearance: none !important;
+  background-size: 15px;
 }
 
 .options1 {
