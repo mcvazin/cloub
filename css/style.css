@@ -276,7 +276,9 @@ select.minimal {
 
 /*checkbox green*/
 .opt-switch input[type="checkbox"] {
-  appearance: none;
+  appearance: none ;
+					-moz-appearance: none ;
+					-webkit-appearance: none ;
   height: 22px;
   width: 41px;
   margin: 5px;
@@ -311,7 +313,9 @@ select.minimal {
 
 /*checkbox star*/
 .opt-star input[type="checkbox"] {
-  appearance: none;
+  appearance: none ;
+					-moz-appearance: none ;
+					-webkit-appearance: none ;
   height: 18px;
   width: 18px;
   outline: none;
