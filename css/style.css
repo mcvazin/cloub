@@ -260,12 +260,13 @@ select.minimal {
   background: #ffffff;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
   padding-right: 10px;
+  padding-left: 10px;
   border-radius: 4px;
   border: none;
   width: 202px;
   height: 44px;
-  text-align: center;
-  text-align-last: center;
+  /*text-align: center;
+  text-align-last: center; */
   font-weight: 600;
   font-size: 12px;
   -webkit-appearance: none;
