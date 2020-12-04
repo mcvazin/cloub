@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap');
 
 *,
 *::before,
@@ -615,6 +615,7 @@ td.add-row {
   height: 50px;
   vertical-align: middle;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .table.filter-results thead tr th:first-child {
