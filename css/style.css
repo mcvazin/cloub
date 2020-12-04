@@ -1237,6 +1237,10 @@ td.add-row span {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.table.filter-results thead tr th:first-child {
+  padding-left: 10px;
+}
 } /*1580*/
 
 @media only screen and (max-width: 1500px) {
