@@ -637,7 +637,7 @@ td.add-row {
   font-size: 12px;
   text-align: center;
   display: inline-block;
-  padding: 3px 15px;
+  padding: 3px;
 }
 
 .table td span > .status.blue {
@@ -743,6 +743,7 @@ h1.main-title {
 .user-manager img {
   background: #ffffff;
   border: 2px solid #ffffff;
+  border-color: transparent;
   box-sizing: border-box;
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
