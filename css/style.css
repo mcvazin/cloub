@@ -162,6 +162,11 @@ input.form-control {
   color: #000000;
 }
 
+.menu__item > a:hover {
+  color: #1770d5;
+}
+
+
 li.menu__item:not(:last-child) {
   margin-right: 44px;
 }
