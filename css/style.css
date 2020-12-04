@@ -265,15 +265,18 @@ select.minimal {
   border: none;
   width: 202px;
   height: 44px;
-  /*text-align: center;
-  text-align-last: center; */
+  
+  text-align: center;
+  text-align-last: center; 
+  text-align: -webkit-center;
+
   font-weight: 600;
   font-size: 14px;
   -webkit-appearance: none;
   background-image: url(../img/ico/arrow-down-2.svg);
   background-position: right 10px center;
   background-repeat: no-repeat;
-  line-height: 1em;
+  line-height: 1.2em;
   -moz-appearance: none;
   text-indent: 0.01px;
   text-overflow: '';
