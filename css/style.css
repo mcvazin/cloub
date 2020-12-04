@@ -947,6 +947,10 @@ p.procces span:nth-child(2) {
   display: flex;
 }
 
+.user-links a {
+  width: 33.33%;
+}
+
 span.text-new {
   color: #1770d5;
 }

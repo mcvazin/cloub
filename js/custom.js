@@ -35,7 +35,7 @@ $(document).ready(function () {
   });
 
   /*select-center*/
-  //  Implementation
+    //  Implementation
 var getTextWidth = function(text,textClass) {
   var span = document.createElement('span') 
   span.style.opacity = 0
@@ -51,7 +51,7 @@ var getTextWidth = function(text,textClass) {
 var getSelectOptionIndentToCenter = function (selectElement,textClass) {
   var selectChoice = selectElement.querySelector('option:checked')
   var emptySpace = selectElement.offsetWidth - getTextWidth(selectChoice.innerHTML,textClass)
-  return emptySpace / 2
+  return emptySpace /2
 }
 
 var mutateSelectCenterOption = function (selectElement,textClass,offset) {
@@ -76,9 +76,16 @@ var mutateMultiSelectCenterOption = function(selector,textClass,offset) {
 }
 
 // Example 
-
 mutateMultiSelectCenterOption('select','minimal',10)
+/*select-center*/
 
 
-  /*select-center*/
+$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+  mutateMultiSelectCenterOption('select','minimal',10)
+})
+
+$( ".minimal" ).change(function() {
+  mutateMultiSelectCenterOption('select','minimal',10)
+});
+
 }); /*END JQuery*/
