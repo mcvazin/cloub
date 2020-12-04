@@ -265,11 +265,12 @@ select.minimal {
   border: none;
   width: 202px;
   height: 44px;
-  
+  /*
   text-align: center;
   text-align-last: center; 
   text-align: -webkit-center;
-
+  text-align:-moz-center;
+  */
   font-weight: 600;
   font-size: 14px;
   -webkit-appearance: none;
